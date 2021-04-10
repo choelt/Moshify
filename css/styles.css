@@ -15,7 +15,13 @@
   box-sizing: border-box;
 }
 
-/* Typography */
+.container {
+  max-width: 1140px;
+  /* 0 vertical margin and extra space equally distributed to left and right */
+  margin: 0 auto;
+}
+
+/*############################################### Typography ######################################################## */
 ::selection {
   background: var(--color-primary);
   color: #fff;
@@ -75,13 +81,7 @@ p {
   }
 }
 
-.container {
-  max-width: 1140px;
-  /* 0 vertical margin and extra space equally distributed to left and right */
-  margin: 0 auto;
-}
-
-/* Links */
+/*############################################### Links ######################################################## */
 a {
   text-decoration: none;
 }
@@ -109,7 +109,7 @@ a {
   }
 }
 
-/* Badges */
+/*############################################### Badges ######################################################## */
 .badge {
   border-radius: 20px;
   font-size: 2rem;
@@ -142,7 +142,7 @@ a {
   }
 }
 
-/* Lists */
+/*############################################### Lists ######################################################## */
 .list {
   list-style: none;
   padding-left: 0;
@@ -170,7 +170,7 @@ a {
   }
 }
 
-/* Icons */
+/*############################################### Icons ######################################################## */
 .icon {
   width: 40px;
   height: 40px;
@@ -203,7 +203,7 @@ a {
   background: var(--color-accent);
 }
 
-/* Buttons */
+/*############################################### Buttons ######################################################## */
 .btn {
   border-radius: 40px;
   border: 0;
@@ -279,7 +279,7 @@ a {
   }
 }
 
-/* Inputs */
+/*############################################### Inputs ######################################################## */
 .input {
   border-radius: 30px;
   border: 1px solid var(--color-border);
@@ -315,7 +315,7 @@ a {
   }
 }
 
-/* Cards */
+/*############################################### Cards ######################################################## */
 .card {
   border-radius: 7px;
   box-shadow: 0 0 20px 10px #f3f3f3;
@@ -345,7 +345,7 @@ a {
   background: #02cdf1;
 }
 
-/* Plans */
+/*############################################### Plans ######################################################## */
 .plan {
   transition: transform 0.2s ease-out;
 }
@@ -423,7 +423,7 @@ a {
   }
 }
 
-/* Media */
+/*############################################### Media ######################################################## */
 .media {
   display: flex;
   margin-bottom: 4rem;
@@ -441,7 +441,7 @@ a {
   margin-top: 1rem;
 }
 
-/* Quotes */
+/*############################################### Quotes ######################################################## */
 .quote {
   font-size: 3rem;
   font-style: italic;
@@ -490,7 +490,7 @@ a {
   }
 }
 
-/* Grids */
+/*############################################### Grids ######################################################## */
 .grid {
   display: grid;
 }
@@ -507,7 +507,7 @@ a {
   }
 }
 
-/* Testimonials */
+/*############################################### Testimonials ######################################################## */
 .testimonial {
   padding: 3rem;
 }
@@ -544,7 +544,7 @@ a {
   }
 }
 
-/* Callouts */
+/*############################################### Callouts ######################################################## */
 .callout {
   padding: 4rem;
   border-radius: 5px;
@@ -585,7 +585,7 @@ a {
   }
 }
 
-/* Collapsibles */
+/*############################################### Collapsibles ######################################################## */
 .collapsible__header {
   display: flex;
   justify-content: space-between;
@@ -596,7 +596,7 @@ a {
   margin-top: 0;
 }
 
-.collapsible__chevron {
+.collapsible__toggler {
   transform: rotate(-90deg);
   transition: transform 0.3s;
 }
@@ -608,7 +608,7 @@ a {
   transition: all 0.3s;
 }
 
-.collapsible--expanded .collapsible__chevron {
+.collapsible--expanded .collapsible__toggler {
   transform: none;
 }
 
@@ -617,7 +617,7 @@ a {
   opacity: 1;
 }
 
-/* Blocks */
+/*############################################### Blocks ######################################################## */
 .block {
   --padding-vertical: 6rem;
   padding: var(--padding-vertical) 2rem;
@@ -654,7 +654,7 @@ a {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
 }
 
-/* Navigation Bar */
+/*############################################### Navigation Bar ######################################################## */
 .nav {
   background: #000;
   display: flex;
@@ -719,7 +719,7 @@ a {
   }
 }
 
-/* Hero Banner */
+/*############################################### Hero Banner ######################################################## */
 .hero__tagline {
   font-size: 2rem;
   color: #b9c3cf;
@@ -746,7 +746,7 @@ a {
   }
 }
 
-/* Domain Block */
+/*############################################### Domains Block ######################################################## */
 .block-domain .input-group {
   box-shadow: 0 0 30px 20px #e6ebee;
   border: 0;
@@ -771,7 +771,7 @@ a {
   }
 }
 
-/* Plans */
+/*############################################### Plans Block ######################################################## */
 .block-plans .grid {
   gap: 8rem 4rem;
 }
@@ -781,7 +781,7 @@ a {
   margin: 0 auto;
 }
 
-/* Features */
+/*############################################### Features Block ######################################################## */
 .feature {
   gap: 4rem 2rem;
   margin: 12rem 0;
@@ -805,7 +805,7 @@ a {
   }
 }
 
-/* Showcase Block*/
+/*############################################### Showcase Block ######################################################## */
 .block-showcase__image > img {
   width: 100%;
 }
@@ -822,5 +822,82 @@ a {
   .block-showcase__image > img {
     width: auto;
     max-width: 700px;
+  }
+}
+
+/*############################################### Footer ######################################################## */
+.footer {
+  background: #232323;
+}
+
+.footer__section {
+  padding: 2rem;
+  border-bottom: 1px solid #393939;
+}
+
+.footer__heading {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.footer a {
+  color: #777;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+.footer__logo {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.footer__logo img {
+  /* TODO:  Consider refactoring and applying this to all img tags by default */
+  width: 100%;
+  max-width: 230px;
+}
+
+.footer__copyright {
+  color: #fff;
+  font-size: 2.1rem;
+  opacity: 0.3;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__sections {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+
+  .footer__heading {
+    font-size: 1.6rem;
+  }
+
+  .footer__section {
+    border: 0;
+  }
+
+  .footer__section .list {
+    margin: 0;
+  }
+
+  .footer .collapsible__toggler {
+    display: none;
+  }
+
+  .footer .collapsible__content {
+    max-height: 100%;
+    opacity: 1;
+  }
+
+  .footer__logo {
+    margin-top: 1rem;
+    order: -1; /* To move logo & copyright to leftmost cell (Default is '0') */
+  }
+
+  .footer__copyright {
+    font-size: 1.5rem;
   }
 }
