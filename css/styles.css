@@ -16,6 +16,7 @@
 }
 
 .container {
+  min-width: 280px;
   max-width: 1140px;
   /* 0 vertical margin and extra space equally distributed to left and right */
   margin: 0 auto;
@@ -287,6 +288,7 @@ a {
   font-size: 2rem;
   outline: 0;
   padding: 1.5rem 3.5rem;
+  width: 0;
 }
 
 ::placeholder {
@@ -312,6 +314,26 @@ a {
 @media screen and (min-width: 1024px) {
   .input {
     font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .block-domain .input {
+    font-size: 1.5rem;
+  }
+
+  .block-domain .block-domain__prices {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .block-domain .btn {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 2rem 0.5rem;
+  }
+
+  .block-domain .btn .icon {
+    margin-right: 0;
   }
 }
 
@@ -544,6 +566,25 @@ a {
   }
 }
 
+@media screen and (max-width: 440px) {
+  .testimonial {
+    padding: 3rem 2rem;
+  }
+
+  .testimonial .quote,
+  .testimonial .quote__author {
+    font-size: 1.5rem;
+  }
+
+  .testimonial .quote__company {
+    font-size: 1.25rem;
+  }
+
+  .testimonial .media__image {
+    margin-top: 0;
+  }
+}
+
 /*############################################### Callouts ######################################################## */
 .callout {
   padding: 4rem;
@@ -621,6 +662,7 @@ a {
 .block {
   --padding-vertical: 6rem;
   padding: var(--padding-vertical) 2rem;
+  min-width: 280px;
 }
 
 .block__header {
@@ -755,6 +797,7 @@ a {
 }
 
 .block-domain__prices {
+  color: var(--color-headings);
   display: grid;
   font-size: 2rem;
   font-weight: 600;
